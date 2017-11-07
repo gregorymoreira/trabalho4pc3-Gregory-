@@ -38,14 +38,18 @@ public class Formulario extends HttpServlet {
 		
 		if(sexo.equalsIgnoreCase("masculino")) {
 			int aux=Integer.parseInt(idade);
+			if(aux>0 && aux <120){
 			if(aux>=18) {
-				out.println("<BR>Você precisa servir ao exército!");
-				
+				out.println("<BR>Você precisa servir ao exército!");	
+				}
+				else {
+				out.println("<BR>Você está ok com as obrigações militares.");
+			}
 			}else {
-				out.println("<BR>Você está ok com as obrigações militares!");
+				out.println("<br>Sua idade não é válida.");
 			}
 		}else {
-			out.println("<BR>Você não precisa servir ao exército!");
+			out.println("<BR>Você não precisa servir ao exército.");
 		}
 
 		out.println("<BR></BODY><HTML>");
